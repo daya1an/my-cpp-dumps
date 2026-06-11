@@ -4,13 +4,12 @@ class Solution {
     public int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> stk = new Stack<>();
         int n = asteroids.length;
-        for (int i = 0; i < n; i++){
-            int item = asteroids[i];
+        for (int item : asteroids){
             if (stk.isEmpty()) {
                 stk.push(item);
                 continue;
             }
-    
+            
             while (!stk.isEmpty() && stk.peek() > 0 &&
             item < 0 && (Math.abs(item) > Math.abs(stk.peek()))){
                 stk.pop();
@@ -43,9 +42,7 @@ class Solution {
     }
 }
 
-
-
-//1ms solution
+//1ms solution - beat 100%
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
         int n = asteroids.length;
