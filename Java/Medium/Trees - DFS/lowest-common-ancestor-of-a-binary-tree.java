@@ -13,6 +13,10 @@ class Solution {
             return null;
         } 
 
+        if (root == p || root == q){
+            return root;
+        }
+
         if((p.left == q) || (p.right == q)) {
             return p;
         }
@@ -38,7 +42,7 @@ class Solution {
         if(left != null && right != null) {
             return root;
         }
-        if(left != null) {
+        else if(left != null) {
             return left;
         }
         return right;
