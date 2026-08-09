@@ -31,7 +31,8 @@ class Solution {
             
             else if (root.left == null)
                 return root.right;
-            
+
+            // sub-tree
             else{
                 TreeNode sucessor = root.right;
                 
